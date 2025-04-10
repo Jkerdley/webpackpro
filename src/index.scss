@@ -1,3 +1,7 @@
+$rainy-bg: "../public/assets/rainy-bg.jpg";
+$winter-bg: "../public/assets/winter-bg.jpg";
+$summer-bg: "../public/assets/summer-bg.jpg";
+
 @font-face {
     font-family: "Roboto";
     src: url("./fonts/Roboto-Regular.ttf") format("truetype");
@@ -9,8 +13,19 @@ body {
     height: 100vh;
     background-size: cover;
     background-position: center;
-    max-width: 960px;
+    max-width: 1200px;
     margin: 1rem auto;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.rainy-bg {
+    background-image: url($rainy-bg);
+}
+.winter-bg {
+    background-image: url($winter-bg);
+}
+.summer-bg {
+    background-image: url($summer-bg);
 }
 
 h1 {
@@ -20,8 +35,9 @@ h1 {
 }
 
 button {
+    display: flex;
     background: #d8d8d8;
-    padding: 1rem;
+    padding: 2rem;
     width: 8em;
     height: 8em;
     border: none;
@@ -32,8 +48,30 @@ button {
         transform: scale(105%);
     }
 }
-.first-button {
-    background-image: url("../public/assets/rainy-bg.jpg");
+.main-container {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+%button {
     background-size: cover;
     background-position: center;
+}
+
+.first-button {
+    background-image: url("../public/assets/rainy-bg.jpg");
+    @extend %button;
+}
+.second-button {
+    background-image: url("../public/assets/winter-bg.jpg");
+    @extend %button;
+}
+.third-button {
+    background-image: url("../public/assets/summer-bg.jpg");
+    @extend %button;
 }
