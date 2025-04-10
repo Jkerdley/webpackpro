@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "./index.scss";
+import { WheatherCard } from "./components/WheatherCard";
 export function App() {
-    const [count, setCount] = useState(0);
     return (
-        <>
-            <h1>Hello Webpack</h1>
-            <h3>Count: {count}</h3>
-            <button onClick={() => setCount((prev) => prev + 1)}>Увеличить</button>
-        </>
+        <section>
+            <h1>Звуки природы</h1>
+            <WheatherCard />
+        </section>
     );
 }

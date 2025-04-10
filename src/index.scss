@@ -2,9 +2,13 @@
     font-family: "Roboto";
     src: url("./fonts/Roboto-Regular.ttf") format("truetype");
 }
-$primary-color: #707070;
 body {
     font-family: "Roboto", sans-serif;
+    background-image: url("../public/assets/rainy-bg.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
     max-width: 960px;
     margin: 1rem auto;
 }
@@ -12,26 +16,24 @@ body {
 h1 {
     margin-bottom: 1rem;
     text-align: center;
+    color: whitesmoke;
 }
 
-ul {
-    list-style: none;
-}
-li {
-    padding: 1rem 2rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
 button {
     background: #d8d8d8;
     padding: 1rem;
+    width: 8em;
+    height: 8em;
     border: none;
     cursor: pointer;
-    transition: all 0.1s ease-in-out;
+    border-radius: 1em;
+    transition: transform 0.1s ease-in-out;
     &:hover {
-        background: $primary-color;
-        color: wheat;
         transform: scale(105%);
     }
+}
+.first-button {
+    background-image: url("../public/assets/rainy-bg.jpg");
+    background-size: cover;
+    background-position: center;
 }
