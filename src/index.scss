@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+}
+$primary-color: #707070;
+body {
+    font-family: "Roboto", sans-serif;
+    max-width: 960px;
+    margin: 1rem auto;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+li {
+    padding: 1rem 2rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+button {
+    background: #d8d8d8;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+        background: $primary-color;
+        color: wheat;
+        transform: scale(105%);
+    }
+}
