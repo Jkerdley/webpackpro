@@ -1,37 +1,77 @@
+$rainy-bg: "../public/assets/rainy-bg.jpg";
+$winter-bg: "../public/assets/winter-bg.jpg";
+$summer-bg: "../public/assets/summer-bg.jpg";
+
 @font-face {
     font-family: "Roboto";
     src: url("./fonts/Roboto-Regular.ttf") format("truetype");
 }
-$primary-color: #707070;
 body {
     font-family: "Roboto", sans-serif;
-    max-width: 960px;
+    background-image: url("../public/assets/winter-bg.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    max-width: 1200px;
     margin: 1rem auto;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.rainy-bg {
+    background-image: url($rainy-bg);
+}
+.winter-bg {
+    background-image: url($winter-bg);
+}
+.summer-bg {
+    background-image: url($summer-bg);
 }
 
 h1 {
     margin-bottom: 1rem;
     text-align: center;
+    color: whitesmoke;
 }
 
-ul {
-    list-style: none;
-}
-li {
-    padding: 1rem 2rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
 button {
+    display: flex;
     background: #d8d8d8;
-    padding: 1rem;
+    padding: 2rem;
+    width: 8em;
+    height: 8em;
     border: none;
     cursor: pointer;
-    transition: all 0.1s ease-in-out;
+    border-radius: 1em;
+    transition: transform 0.2s ease-in-out;
     &:hover {
-        background: $primary-color;
-        color: wheat;
         transform: scale(105%);
     }
+}
+.main-container {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+%button {
+    background-size: cover;
+    background-position: center;
+}
+
+.first-button {
+    background-image: url("../public/assets/rainy-bg.jpg");
+    @extend %button;
+}
+.second-button {
+    background-image: url("../public/assets/winter-bg.jpg");
+    @extend %button;
+}
+.third-button {
+    background-image: url("../public/assets/summer-bg.jpg");
+    @extend %button;
 }

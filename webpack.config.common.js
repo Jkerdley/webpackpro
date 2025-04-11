@@ -22,44 +22,16 @@ module.exports = {
             patterns: [
                 { from: path.resolve(__dirname, "public/favicon.ico"), to: path.resolve(__dirname, "dist") },
                 {
-                    from: path.resolve(__dirname, "public/assets/rainy-bg.jpg"),
-                    to: path.resolve(__dirname, "dist"),
+                    from: path.resolve(__dirname, "public/assets"),
+                    to: path.resolve(__dirname, "dist/assets"),
                 },
                 {
-                    from: path.resolve(__dirname, "public/assets/summer-bg.jpg"),
-                    to: path.resolve(__dirname, "dist"),
+                    from: path.resolve(__dirname, "public/assets/icons"),
+                    to: path.resolve(__dirname, "dist/assets/icons"),
                 },
                 {
-                    from: path.resolve(__dirname, "public/assets/winter-bg.jpg"),
-                    to: path.resolve(__dirname, "dist"),
-                },
-                {
-                    from: path.resolve(__dirname, "public/assets/icons/cloud-rain.svg"),
-                    to: path.resolve(__dirname, "dist"),
-                },
-                {
-                    from: path.resolve(__dirname, "public/assets/icons/cloud-snow.svg"),
-                    to: path.resolve(__dirname, "dist"),
-                },
-                {
-                    from: path.resolve(__dirname, "public/assets/icons/pause.svg"),
-                    to: path.resolve(__dirname, "dist"),
-                },
-                {
-                    from: path.resolve(__dirname, "public/assets/icons/sun.svg"),
-                    to: path.resolve(__dirname, "dist"),
-                },
-                {
-                    from: path.resolve(__dirname, "public/assets/sounds/rain.mp3"),
-                    to: path.resolve(__dirname, "dist"),
-                },
-                {
-                    from: path.resolve(__dirname, "public/assets/sounds/summer.mp3"),
-                    to: path.resolve(__dirname, "dist"),
-                },
-                {
-                    from: path.resolve(__dirname, "public/assets/sounds/winter.mp3"),
-                    to: path.resolve(__dirname, "dist"),
+                    from: path.resolve(__dirname, "public/assets/sounds"),
+                    to: path.resolve(__dirname, "dist/assets/sounds"),
                 },
             ],
         }),
